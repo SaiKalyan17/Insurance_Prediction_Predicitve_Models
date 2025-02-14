@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Premium Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Insurance Premium Prediction</h1>
+        <form method="POST">
+            <label for="age">Age (18-60):</label>
+            <input type="number" id="age" name="age" min="18" max="60" required>
+
+            <label for="sex">Sex:</label>
+            <select id="sex" name="sex" required>
+                <option value="1">Female</option>
+                <option value="2">Male</option>
+            </select>
+
+            <label for="bmi">BMI:</label>
+            <input type="number" id="bmi" name="bmi" step="0.01" required>
+
+            <label for="children">Number of Children (0-5):</label>
+            <input type="number" id="children" name="children" min="0" max="5" required>
+
+            <label for="smoker">Smoker:</label>
+            <select id="smoker" name="smoker" required>
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+            </select>
+
+            <label for="region">Region:</label>
+            <select id="region" name="region" required>
+                <option value="1">Northeast</option>
+                <option value="2">Northwest</option>
+                <option value="3">Southeast</option>
+                <option value="4">Southwest</option>
+            </select>
+
+            <button type="submit">Predict Premium</button>
+        </form>
+
+        {% if prediction %}
+            <h2>{{ prediction }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
