@@ -1,5 +1,7 @@
 # Insurance_Prediction_Predicitve_Models
 
+
+
 # OVERVIEW
 
 This project focuses on predicting insurance premiums using machine learning models based on customer demographics, health conditions, and other relevant factors. By leveraging data-driven insights, the model aims to provide accurate premium estimates, helping insurance companies assess risks and optimize pricing strategies.
@@ -28,6 +30,11 @@ Deployment-ready model for real-world insurance applications.
 This project has potential applications in insurance underwriting, customer risk profiling, and policy pricing optimization, benefiting both insurers and customers through fair and accurate premium predictions.
 
 
+# Procedure
+
+Connected the project’s frontend to the backend using Flask.
+Executed the .ipynb file to generate scaler.pkl and model.pkl for the Flask application.
+Launched index.html to view the output.
 
 
 
